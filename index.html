@@ -251,7 +251,7 @@ body{background:#fff;font-family:'Montserrat',sans-serif;}
 <div id="page-about" class="page">
   <div id="about-top">
     <div id="about-photo">
-      <img src="img/Profil/Rafael_Rodrigues.jpeg" alt="Rafael Rodrigues Braguês" style="width:70%;height:70%;object-fit:cover;">
+      <img src="img/Profil/Rafael_Rodrigues.jpeg" alt="Rafael Rodrigues Braguês" style="width:100%;height:100%;object-fit:cover;">
       <div id="about-caption">
         <div id="about-caption-name">Rafael Rodrigues Braguês</div>
         <div id="about-caption-role">Architect — Lisbon / Brussels</div>
@@ -512,7 +512,7 @@ const ATLAS_07 = [
   ];
   const GALLERY_07 = [
 
-  {src:'img/PRV2/projet/img18.jpg', label:'Atlas Part 2'},
+  {src:'img/MA1/Q1/Atlas/Confort_Chois__Atlas_01.jpg', label:'Atlas Confort Choisi'},
 
   ];
 
@@ -713,7 +713,7 @@ function openDetail(pi){
   // Atlas viewer (project 05 only)
   const atlasWrap=document.getElementById('atlas-wrap');
   if(atlasWrap){
-    const atlasMap={4:ATLAS_05,5:ATLAS_06};
+    const atlasMap={4:ATLAS_05,5:ATLAS_06,7:ATLAS_07};
     if(atlasMap[pi]){
       atlasData=atlasMap[pi];
       atlasWrap.style.display='block';
