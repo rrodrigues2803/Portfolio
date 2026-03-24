@@ -519,7 +519,22 @@ const ATLAS_07 = [
 // ══ DATA ══
 const PROJECTS = [
   {
-    num:'01', type:'Academic Project — BA1', name:'CycleStop Hostel',
+    num:'01', type:'Academic Project — BA1', name:'Projet BA1',
+    loc:'Middelheim Park, Antwerp', year:'2023', area:'Pavillon · Vertical structure',
+    gallery: [
+      {src:'img/BA1/ba1-01.webp', label:'Projet BA1'},
+      {src:'img/BA1/ba1-02.webp', label:'Projet BA1'},
+      {src:'img/BA1/ba1-03.webp', label:'Projet BA1'},
+      {src:'img/BA1/ba1-01.webp', label:'Projet BA1'},
+      {src:'img/BA1/ba1-02.webp', label:'Projet BA1'},
+      {src:'img/BA1/ba1-03.webp', label:'Projet BA1'},
+    ],
+    desc_en: `As part of this first-year project, we studied the —Franchise Unit— pavilion by Atelier Van Lieshout. The first stage involved analysing and deconstructing the existing pavilion through precise surveys, measurements and the creation of a detailed inventory of its materials and structural elements. This work enabled us to understand its structural logic and functional organisation.`,
+    desc_fr: `Dans le cadre de ce projet de première année, nous avons étudié le pavillon —Franchise Unit— (2002) d'Atelier Van Lieshout. La première étape consistait à analyser et déconstruire le pavillon existant à travers des relevés précis, des mesures et la réalisation d'un inventaire détaillé de ses matériaux et de ses éléments constructifs. Ce travail nous a permis de comprendre sa logique structurelle et son organisation fonctionnelle.`,
+    desc_de: `Im Rahmen dieses Projekts im ersten Studienjahr haben wir den Pavillon —Franchise Unit— von Atelier Van Lieshout untersucht. Der erste Schritt bestand darin, den bestehenden Pavillon durch genaue Aufmaße, Vermessungen und die Erstellung eines detaillierten Verzeichnisses seiner Materialien und Bauteile zu analysieren und zu dekonstruieren. Diese Arbeit ermöglichte es uns, seine strukturelle Logik und seine funktionale Organisation zu verstehen.`,
+  },
+  {
+    num:'02', type:'Academic Project — BA1', name:'CycleStop Hostel',
     loc:'Malines (Mechelen), Belgium', year:'2023', area:'2 floors · 16 guests',
     gallery: GALLERY_01,
     desc_en: `The Cyclestop Hostel project is located in Mechelen, Belgium, and blends harmoniously into its natural surroundings, near the Dijle river and a busy cycle path. This modern hostel, spread over two floors, accommodates up to 16 guests in two dormitories. The shape follows the slope of the Dijle dune, blending perfectly into the landscape. The green roof promotes ecological insulation and wildlife movement.`,
@@ -527,7 +542,7 @@ const PROJECTS = [
     desc_de: `Das Projekt Cyclestop Hostel befindet sich in Mechelen, Belgien, und fügt sich harmonisch in eine natürliche Umgebung ein, nahe der Dijle und eines Fahrradwegs. Diese moderne Herberge über zwei Etagen ist für bis zu 16 Gäste ausgelegt. Die Form setzt die Neigung der Düne fort. Das begrünte Dach fördert ökologische Isolierung und Tierbewegung.`,
   },
   {
-    num:'02', type:'Academic Project — BA1', name:'La Serre des Voisins',
+    num:'03', type:'Academic Project — BA1', name:'La Serre des Voisins',
     loc:'Mons, Belgium', year:'2023–24', area:'Collective greenhouse',
     gallery: GALLERY_02,
     desc_en: `The 'La serre des voisins' project is situated within a residential area on Chaussée de Binche in Mons, Belgium. Behind the terraced houses, each resident has a garden, followed by a row of garages on a quiet street. This project aims to transform the space next to the garages into a communal greenhouse, offering residents a place for growing and sharing. More than just a garden, this greenhouse becomes a space for exchange and communal activities, fostering sociability and cooperation between neighbours. By adopting the linear form and the same materials as the garages, the greenhouse blends harmoniously into the existing landscape.`,
@@ -535,7 +550,7 @@ const PROJECTS = [
     desc_de: `Das Projekt „La serre des voisins" fügt sich in ein Wohngebiet an der Chaussée de Binche in Mons, Belgien, ein. Hinter den Reihenhäusern hat jeder Bewohner einen Garten, gefolgt von einer Reihe von Garagen an einer ruhigen Straße. Dieses Projekt verwandelt den Raum neben den Garagen in ein gemeinschaftliches Gewächshaus. Durch die Übernahme der linearen Form und der gleichen Materialien wie die Garagen fügt sich das Gewächshaus harmonisch in die bestehende Landschaft ein.`,
   },
   {
-    num:'03', type:'Academic Project — BA3', name:'La Tour de la Senne',
+    num:'04', type:'Academic Project — BA3', name:'La Tour de la Senne',
     loc:'Bruxelles, Belgium', year:'2024', area:'Greenhouse + 2 apartments',
     gallery: GALLERY_03,
     desc_en: `The 'La tour de la Senne' project transforms an abandoned warehouse into an innovative space combining residential living with community activities. Located near the park on the banks of the Senne, this intervention responds to the urgent need for green spaces in the neighbourhood. The project removes the hall's existing cladding and replaces it with glass, creating a greenhouse. A tower houses two flats whilst ensuring easy access from Rue Joly to the park.`,
@@ -543,7 +558,7 @@ const PROJECTS = [
     desc_de: `Das Projekt „La tour de la Senne" verwandelt eine verlassene Halle in einen innovativen Raum, der Wohnraum und Gemeinschaftsaktivitäten verbindet. In der Nähe des Parks an der Senne gelegen, reagiert dieses Eingreifen auf den dringenden Bedarf an Grünflächen im Viertel.`,
   },
   {
-    num:'04', type:'Academic Project — MA1', name:'Connexion Senne',
+    num:'05', type:'Academic Project — MA1', name:'Connexion Senne',
     loc:'Bruxelles, Belgium', year:'2024', area:'Cultural + Sports centre',
     gallery: GALLERY_04,
     desc_en: `The "Connexion Senne" project is located at the far end of Parc Maximilien, opposite the Senne and the future Centre Pompidou in Brussels. It combines sport and culture whilst creating a link between the neighbourhood east of the park and the Senne. The concept is based on a straight line crossing the passageway between Avenue de l'Héliport and Rue du Frontispice.`,
@@ -551,7 +566,7 @@ const PROJECTS = [
     desc_de: `Das Projekt „Connexion Senne" befindet sich am Ende des Parc Maximilien, gegenüber der Senne und dem zukünftigen Centre Pompidou in Brüssel. Es kombiniert Sport und Kultur und schafft eine Verbindung zwischen dem Viertel östlich des Parks und der Senne.`,
   },
   {
-    num:'05', type:'Research & Exhibition', name:'PRV — Part 1',
+    num:'06', type:'Research & Exhibition', name:'PRV — Part 1',
     loc:'—', year:'2024', area:'Dirty Material',
     gallery: GALLERY_05,
     desc_en: `PRV — Part 1 is a research and exhibition project exploring polyester resin as a building material. Resistant, indestructible, mouldable — the material raises questions about heritage, revolution and the future of construction.`,
@@ -559,7 +574,7 @@ const PROJECTS = [
     desc_de: `PRV — Teil 1 ist ein Forschungs- und Ausstellungsprojekt über Polyesterharz als Baumaterial. Widerstandsfähig, unzerstörbar, formbar — das Material wirft Fragen über Erbe, Revolution und die Zukunft des Bauens auf.`,
   },
   {
-    num:'06', type:'Research & Exhibition', name:'PRV — Part 2',
+    num:'08', type:'Research & Exhibition', name:'PRV — Part 2',
     loc:'France', year:'2025', area:'Piscines Monocoques',
     gallery: GALLERY_06, atlas: ATLAS_06,
     desc_en: `In the late 1970s, France's Operation 1000 Pools aimed to install industrially prefabricated swimming facilities across the country. Municipal pools remained but were progressively overtaken by private practices. In a context of +4C, the need to cool down is increasing. By considering inherited industrial shells as a resource, how can we restore collective bathing practices?`,
@@ -567,7 +582,7 @@ const PROJECTS = [
     desc_de: `In den späten 1970er Jahren zielte Frankreichs Operation 1000 Schwimmbäder darauf ab, industriell vorgefertigte Schwimmbadanlagen im ganzen Land zu installieren. In einem Kontext von +4C steigt der Bedarf zum Abkühlen. Indem wir geerbte Industrieschalen als Ressource betrachten, wie können wir kollektive Badepraktiken wiederherstellen?`,
   },
   {
-    num:'07', type:'SIP — Semaine d\'Innovation Pédagogique', name:'Pièce Montée',
+    num:'09', type:'SIP — Semaine d\'Innovation Pédagogique', name:'Pièce Montée',
     loc:'Brussels, Belgium', year:'2025', area:'1:1 Scale Workshop',
     gallery: [
       {src:'img/SIP/sip01.jpg', label:'Pièce Montée'},
@@ -586,21 +601,10 @@ const PROJECTS = [
     desc_fr: `Pièce montée explore la colonne comme architecture, élément, structure et ornement. Partant de la composition traditionnelle - base/fût/chapiteau - le workshop invite à repenser cette fragmentation tripartite à partir d'assemblage de matériaux standardisés, issus du réemploi. Les participants ont travaillé à échelle 1:1 pour fabriquer sept colonnes, mêlant expérimentation matérielle, détournement des normes constructives et réflexion esthétique. Les pièces sont montées à partir d'un matériau unique: brique de terre cuite, panneau multiplex bois, pavé de verre, tubes PVC, bloc et bordure en béton, tube et montants en acier ou tôle bitumée.`,
     desc_de: `„Pièce montée" untersucht die Säule als Architektur, Element, Struktur und Ornament. Ausgehend von der traditionellen Komposition – Sockel/Schaft/Kapitell – lädt der Workshop dazu ein, diese dreiteilige Gliederung durch die Kombination standardisierter, wiederverwendeter Materialien neu zu überdenken. Die Teilnehmer arbeiteten im Maßstab 1:1 an der Herstellung von sieben Säulen und verbanden dabei Materialexperimente, die Umdeutung baulicher Normen und ästhetische Überlegungen.`,
   },
+  
   {
-    num:'08', type:'Academic Project — BA1', name:'Projet BA1',
-    loc:'— À compléter —', year:'—', area:'— À compléter —',
-    gallery: [
-      {src:'img/BA1/ba1-01.webp', label:'Projet BA1'},
-      {src:'img/BA1/ba1-02.webp', label:'Projet BA1'},
-      {src:'img/BA1/ba1-03.webp', label:'Projet BA1'},
-    ],
-    desc_en: `Description to complete.`,
-    desc_fr: `Description à compléter.`,
-    desc_de: `Beschreibung folgt.`,
-  },
-  {
-    num:'09', type:'Academic Project — MA1', name:'Confort Choisi',
-    loc:'Brussels, Belgium', year:'2025', area:'— À compléter —',
+    num:'10', type:'Academic Project — MA1', name:'Confort Choisi',
+    loc:'Brussels, Belgium', year:'2025', area:'—',
     gallery: GALLERY_07, atlas: ATLAS_07,
     desc_en: `Description to complete.`,
     desc_fr: `L’arrivée des systèmes HVAC a profondément transformé l’habitat. D’abord réservées aux bâtiments collectifs et aux foyers aisés, les technologies de chauffage et de ventilation ont progressivement pénétré les maisons, installant l’idée d’une température constante, détachée des saisons et des gestes quotidiens. En quelques générations, une architecture autrefois rythmée par le climat s’est muée en un milieu clos, entièrement régulé par les machines. Historiquement, le confort désignait l’action de soulager, de renforcer face aux difficultés de la vie. Il est devenu aujourd’hui un idéal sans limites, une promesse universelle de bien-être portée par la modernité. Les exigences de performance et d’optimisation se sont matérialisées dans la standardisation, les normes et la domotique. Ce confort « maîtrisé » neutralise les aléas naturels, efface l’effort corporel et homogénéise l’expérience de l’habiter. La maison n’évolue plus avec les saisons : elle impose une température, une lumière et un climat stables, artificiels. Le confort choisi interroge la réappropriation des conditions mêmes de notre confort à travers la manipulation et l’adaptation. Il repose sur une relation active, située et négociée entre le corps et le dispositif technique, entre la matière et le climat. Redonner un rôle actif aux usagers et prôner le confort choisi constituent des outils pour questionner les défis climatiques et les logiques du capitalisme. `,
