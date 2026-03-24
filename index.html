@@ -780,12 +780,6 @@ stage.addEventListener('mouseenter',()=>{ acSVG.style.display='block'; });
 stage.addEventListener('mouseleave',()=>{ acSVG.style.display='none'; });
 stage.addEventListener('touchend',()=>{ clearTrail(); });
 
-// Long Press Zoom → öffnet Projekt beim Loslassen
-let pressEl=null, pressStart=0, zoomRAF=null, pressPI=null;
-const MAX_SCALE=2.8;
-
-function startLongPress(el, pi){ ... }
-function endLongPress(){ ... }
 
 const pool=[];
 for(let i=0;i<MAX;i++){
@@ -824,12 +818,8 @@ function spawn(mx,my){
     // cursor image = color, all others = grayscale
     s.el.style.filter=i===0?'grayscale(0%)':'grayscale(100%)';
     if(i===0){
-  s.el.style.pointerEvents='all'; s.el.style.cursor='pointer';
-  s.el._rot=s.rot;
-  s.el.onclick=null;
-  s.el.ontouchstart=(e)=>{ e.preventDefault(); startLongPress(s.el, s.pi); };
-  s.el.ontouchend=(e)=>{ e.preventDefault(); endLongPress(); };
-  s.el.ontouchcancel=()=>{ endLongPress(); };
+      s.el.style.pointerEvents='all'; s.el.style.cursor='pointer';
+      s.el.onclick=(()=>{const p=s.pi;return()=>clickTrail(s.el,p);})();
     } else {
       s.el.style.pointerEvents='none'; s.el.style.cursor='none'; s.el.onclick=null;
     }
