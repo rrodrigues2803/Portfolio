@@ -1029,6 +1029,25 @@ if(atlasNextZone){
   atlasNextZone.addEventListener('mouseenter',()=>{ atlasArrR.style.opacity='1'; atlasArrL.style.opacity='0'; });
   atlasNextZone.addEventListener('mouseleave',()=>{ atlasArrR.style.opacity='0'; });
 }
+// ══ KEYBOARD NAVIGATION ══
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('page-detail').classList.contains('active')) return;
+  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+
+  const atlasWrap = document.getElementById('atlas-wrap');
+  const atlasVisible = atlasWrap && atlasWrap.style.display !== 'none';
+
+  // Nur Atlas navigieren, wenn Atlas sichtbar UND Maus darüber ist
+  if (atlasVisible && atlasWrap.matches(':hover')) {
+    if (e.key === 'ArrowRight') atlasNext();
+    else atlasPrev();
+  }
+  // Sonst Hauptgalerie navigieren
+  else if (gData) {
+    if (e.key === 'ArrowRight') showImg(gIdx + 1);
+    else showImg(gIdx - 1);
+  }
+});
 </script>
 </body>
 </html>
