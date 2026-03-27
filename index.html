@@ -1032,21 +1032,9 @@ if(atlasNextZone){
 // ══ KEYBOARD NAVIGATION ══
 document.addEventListener('keydown', function(e) {
   if (!document.getElementById('page-detail').classList.contains('active')) return;
-  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-
-  const atlasWrap = document.getElementById('atlas-wrap');
-  const atlasVisible = atlasWrap && atlasWrap.style.display !== 'none';
-
-  // Nur Atlas navigieren, wenn Atlas sichtbar UND Maus darüber ist
-  if (atlasVisible && atlasWrap.matches(':hover')) {
-    if (e.key === 'ArrowRight') atlasNext();
-    else atlasPrev();
-  }
-  // Sonst Hauptgalerie navigieren
-  else if (gData) {
-    if (e.key === 'ArrowRight') showImg(gIdx + 1);
-    else showImg(gIdx - 1);
-  }
+  if (!gData) return;
+  if (e.key === 'ArrowRight') showImg(gIdx + 1);
+  else if (e.key === 'ArrowLeft') showImg(gIdx - 1);
 });
 </script>
 </body>
