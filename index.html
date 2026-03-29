@@ -535,10 +535,10 @@ const ATLAS_07 = [
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_08.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_09.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_10.jpg', vsrc:'videos/AtlasVideo01.mp4', label:'Atlas Confort Choisi', type:'video20'},
-  {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_11.jpg', vsrc:'videos/AtlasVideo02.mp4', label:'Atlas Confort Choisi', type:'video21'},
+  {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_11.jpg', vsrc:'videos/AtlasVideo03.mp4', label:'Atlas Confort Choisi', type:'video21'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_12.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_13.jpg', label:'Atlas Confort Choisi'},
-  {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_14.jpg', label:'Atlas Confort Choisi'},
+  {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_14.jpg', vsrc:'videos/AtlasVideo02.mp4', label:'Atlas Confort Choisi', type:'video21'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_15.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_16.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_17.jpg', label:'Atlas Confort Choisi'},
@@ -1022,7 +1022,17 @@ function atlasShow(idx){
     img.style.transition='opacity .2s';
     const v=document.createElement('video');
     v.id='atlas-video'; v.src=item.vsrc; v.controls=true;
-    v.style.cssText='position:absolute;left:17.7%;bottom:8%;width:30.5%;aspect-ratio:16/9;object-fit:fill;z-index:10;';
+    v.style.cssText='position:absolute;left:57.1%;bottom:20%;width:40%;aspect-ratio:16/9;object-fit:fill;z-index:10;';
+    setTimeout(()=>zone.appendChild(v),160);
+
+
+    } else if(item.type==='video22'){
+    img.style.opacity='0';
+    setTimeout(()=>{img.src=item.src;img.style.opacity='1';},120);
+    img.style.transition='opacity .2s';
+    const v=document.createElement('video');
+    v.id='atlas-video'; v.src=item.vsrc; v.controls=true;
+    v.style.cssText='position:absolute;left:58%;bottom:20%;width:40%;aspect-ratio:16/9;object-fit:fill;z-index:10;';
     setTimeout(()=>zone.appendChild(v),160);
 
   } else {
