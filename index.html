@@ -538,7 +538,7 @@ const ATLAS_07 = [
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_11.jpg', vsrc:'videos/AtlasVideo03.mp4', label:'Atlas Confort Choisi', type:'video21'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_12.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_13.jpg', label:'Atlas Confort Choisi'},
-  {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_14.jpg', vsrc:'videos/AtlasVideo02.mp4', label:'Atlas Confort Choisi', type:'video21'},
+  {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_14.jpg', vsrc:'videos/AtlasVideo02.mp4', label:'Atlas Confort Choisi', type:'video22'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_15.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_16.jpg', label:'Atlas Confort Choisi'},
   {src:'img/MA1/Q1/Atlas/Confort_Chois_Atlas_17.jpg', label:'Atlas Confort Choisi'},
@@ -1032,7 +1032,7 @@ function atlasShow(idx){
     img.style.transition='opacity .2s';
     const v=document.createElement('video');
     v.id='atlas-video'; v.src=item.vsrc; v.controls=true;
-    v.style.cssText='position:absolute;left:61%;bottom:-10%;width:41%;aspect-ratio:14/9;object-fit:fill;z-index:10;';
+    v.style.cssText='position:absolute;left:61%;bottom:10%;width:41%;aspect-ratio:14/9;object-fit:fill;z-index:10;';
     setTimeout(()=>zone.appendChild(v),160);
 
   } else {
