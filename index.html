@@ -198,6 +198,7 @@ body{background:#fff;font-family:'Montserrat',sans-serif;}
     <div class="proj" data-cat="BA3" onclick="openDetail(6)"><div class="proj-img-wrap"><img class="proj-img" id="pi6"/><div class="proj-overlay"><div class="proj-overlay-txt">View →</div></div></div><div class="proj-info"><div class="proj-num">07 — Research · 2025</div><div class="proj-name">PRV — Part 2</div><div class="proj-type">Piscines Monocoques</div></div></div>
     <div class="proj" data-cat="SIP" onclick="openDetail(7)"><div class="proj-img-wrap"><img class="proj-img" id="pi7"/><div class="proj-overlay"><div class="proj-overlay-txt">View →</div></div></div><div class="proj-info"><div class="proj-num">08 — SIP · 2025</div><div class="proj-name">Pièce Montée</div><div class="proj-type">Workshop · Brussels</div></div></div>
     <div class="proj" data-cat="MA1" onclick="openDetail(8)"><div class="proj-img-wrap"><img class="proj-img" id="pi8"/><div class="proj-overlay"><div class="proj-overlay-txt">View →</div></div></div><div class="proj-info"><div class="proj-num">09 — MA1 · 2025</div><div class="proj-name">Confort Choisi</div><div class="proj-type">Academic · Brussels</div></div></div>
+    <div class="proj" data-cat="RELEASES" onclick="openDetail(9)"><div class="proj-img-wrap"><img class="proj-img" id="pi9"/><div class="proj-overlay"><div class="proj-overlay-txt">View →</div></div></div><div class="proj-info"><div class="proj-num">10 — RELEASES · 22 Jan 2025</div><div class="proj-name">Dirty Materials</div><div class="proj-type">Booklaunch · CUMA, La Cambre Horta</div></div></div>
   </div>
   <div id="works-footer"><span>© 2025 Rafael Rodrigues Braguês</span><span>Architecture &amp; Design</span></div>
 </div>
@@ -674,6 +675,17 @@ const PROJECTS = [
     desc_fr: `L’arrivée des systèmes HVAC a profondément transformé l’habitat. D’abord réservées aux bâtiments collectifs et aux foyers aisés, les technologies de chauffage et de ventilation ont progressivement pénétré les maisons, installant l’idée d’une température constante, détachée des saisons et des gestes quotidiens. En quelques générations, une architecture autrefois rythmée par le climat s’est muée en un milieu clos, entièrement régulé par les machines. Historiquement, le confort désignait l’action de soulager, de renforcer face aux difficultés de la vie. Il est devenu aujourd’hui un idéal sans limites, une promesse universelle de bien-être portée par la modernité. Les exigences de performance et d’optimisation se sont matérialisées dans la standardisation, les normes et la domotique. Ce confort « maîtrisé » neutralise les aléas naturels, efface l’effort corporel et homogénéise l’expérience de l’habiter. La maison n’évolue plus avec les saisons : elle impose une température, une lumière et un climat stables, artificiels. Le confort choisi interroge la réappropriation des conditions mêmes de notre confort à travers la manipulation et l’adaptation. Il repose sur une relation active, située et négociée entre le corps et le dispositif technique, entre la matière et le climat. Redonner un rôle actif aux usagers et prôner le confort choisi constituent des outils pour questionner les défis climatiques et les logiques du capitalisme. `,
     desc_de: `Beschreibung folgt.`,
   },
+  {
+  num:'11', type:'Release — Book', name:'Dirty Materials',
+  loc:'CUMA, La Cambre Horta, Brussels', year:'2025', area:'—',
+  gallery: [
+      {src:'img/SIP/sip01.jpg', label:'Pièce Montée'},
+      
+    ],
+  desc_en: `Description to complete.`,
+  desc_fr: `Description à compléter.`,
+  desc_de: `Beschreibung folgt.`,
+  },
 ];
 
 
@@ -688,6 +700,7 @@ function initGrid(){
   document.getElementById('pi6').src = GALLERY_06[0].src;
   document.getElementById('pi7').src = 'img/SIP/sip01.jpg';
   document.getElementById('pi8').src = 'img/MA1/Q1/Confort01.jpg';
+  document.getElementById('pi9').src = 'img/releases/cover.jpg';
 }
 
 // ══ FILTER ══
@@ -1023,7 +1036,7 @@ function atlasShow(idx){
     img.style.transition='opacity .2s';
     const v=document.createElement('video');
     v.id='atlas-video'; v.src=item.vsrc; v.controls=true;
-    v.style.cssText='position:absolute;left:61%;bottom:10%;width:30.5%;aspect-ratio:1/0.787;object-fit:fill;z-index:10;';
+    v.style.cssText='position:absolute;left:61%;bottom:10%;width:30.5%;aspect-ratio:16/9;object-fit:fill;z-index:10;';
     setTimeout(()=>zone.appendChild(v),160);
 
 
@@ -1033,7 +1046,7 @@ function atlasShow(idx){
     img.style.transition='opacity .2s';
     const v=document.createElement('video');
     v.id='atlas-video'; v.src=item.vsrc; v.controls=true;
-    v.style.cssText='position:absolute;left:61%;bottom:10%;width:41%;aspect-ratio:1/0.787;object-fit:fill;z-index:10;';
+    v.style.cssText='position:absolute;left:61%;bottom:10%;width:41%;aspect-ratio:18/9;object-fit:fill;z-index:10;';
     setTimeout(()=>zone.appendChild(v),160);
 
   } else {
