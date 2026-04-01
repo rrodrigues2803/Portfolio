@@ -752,8 +752,26 @@ function showImg(idx){
   gIdx=(idx+gData.length)%gData.length;
   const item=gData[gIdx];
   const img=document.getElementById('dimg');
-  img.style.opacity='0';
-  setTimeout(()=>{img.src=item.src;img.style.opacity='1';},160);
+  const detailMain=document.getElementById('detail-main-img');
+
+  // Altes iframe entfernen
+  const oldIframe=detailMain.querySelector('iframe');
+  if(oldIframe) oldIframe.remove();
+  img.style.display='block';
+
+  if(item.type==='vimeo'){
+    img.style.display='none';
+    const iframe=document.createElement('iframe');
+    iframe.src=item.src;
+    iframe.style.cssText='width:100%;height:100%;position:absolute;top:0;left:0;border:none;z-index:5;';
+    iframe.allow='autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen=true;
+    detailMain.appendChild(iframe);
+  } else {
+    img.style.opacity='0';
+    setTimeout(()=>{img.src=item.src;img.style.opacity='1';},160);
+  }
+
   document.getElementById('img-label').textContent=item.label;
   document.getElementById('img-counter').textContent=(gIdx+1)+' / '+gData.length;
   document.querySelectorAll('.thumb').forEach((t,i)=>{ t.classList.toggle('active',i===gIdx); });
