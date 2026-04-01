@@ -986,6 +986,17 @@ function atlasShow(idx){
     v.style.cssText='width:100%;display:block;';
     if(vc){vc.appendChild(v);vc.style.display='block';}
 
+  } else if(item.type==='vimeo'){
+    img.style.display='none';
+    if(pz)pz.style.display='none';
+    if(nz)nz.style.display='none';
+    const iframe=document.createElement('iframe');
+    iframe.src=item.src+'?autoplay=0';
+    iframe.style.cssText='width:100%;aspect-ratio:16/9;border:none;display:block;';
+    iframe.allow='autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen=true;
+    if(vc){vc.appendChild(iframe);vc.style.display='block';}
+
   } else if(item.type==='video09'){
     img.style.opacity='0';
     setTimeout(()=>{img.src=item.src;img.style.opacity='1';},120);
