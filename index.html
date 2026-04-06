@@ -182,8 +182,8 @@ body{background:#fff;font-family:'Montserrat',sans-serif;}
     <span class="filter-btn active" onclick="toggleFilter('BA1')">BA1</span>
     <span class="filter-btn active" onclick="toggleFilter('BA2')">BA2</span>
     <span class="filter-btn active" onclick="toggleFilter('BA3')">BA3</span>
-    <span class="filter-btn active" onclick="toggleFilter('MA1')">M1</span>
-    <span class="filter-btn active" onclick="toggleFilter('M2')">M2</span>
+    <span class="filter-btn active" onclick="toggleFilter('MA1')">MA1</span>
+    <span class="filter-btn active" onclick="toggleFilter('MA2')">MA2</span>
     <span class="filter-btn active" onclick="toggleFilter('SIP')">SIP</span>
     <span class="filter-btn active" onclick="toggleFilter('RELEASES')">RELEASES</span>
   </div>
@@ -948,7 +948,7 @@ function toggleFilter(cat){
     if(activeFilters.has(cat)){
       activeFilters.delete(cat);
       // If nothing selected, reset to all
-      if(activeFilters.size===0){ activeFilters.add('BA1','BA2','BA3','MA1','MA2','SIP','RELEASES'); ['BA1','BA2','BA3','M1','M2','SIP','RELEASES'].forEach(c=>activeFilters.add(c)); allActive=true; }
+      if(activeFilters.size===0){ activeFilters.add('BA1','BA2','BA3','MA1','MA2','SIP','RELEASES'); ['BA1','BA2','BA3','MA1','MA2','SIP','RELEASES'].forEach(c=>activeFilters.add(c)); allActive=true; }
     } else {
       activeFilters.add(cat);
     }
